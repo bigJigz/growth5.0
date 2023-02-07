@@ -20,16 +20,8 @@ img {
   position: relative;
   width: 100%;
   height: 100%;
-}
-
-.container {
-display: flex;
-flex-direction: row;
-position: relative;
-width: 100%;
-height: 100%;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #bg-box {
@@ -39,15 +31,6 @@ align-items: center;
   top: 140px;
   max-width: 1600px;
 }
-
-#fg-box {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  top: 140px;
-  max-width: 1600px;
-}
-
 .bg1 {
   max-width: 320px;
 }
@@ -65,6 +48,15 @@ align-items: center;
 
 .bg5 {
   max-width: 320px;
+}
+
+#fg-box {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 140px;
+  max-width: 1600px;
+  cursor: pointer;
 }
 
 .div1 { 
@@ -116,90 +108,72 @@ align-items: center;
   }
 }
 
-.div1:hover ~ .textbox1 {
-  opacity: 1;
-}
-.textbox1 {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 10%;
-  width: 1540px;
-  height: 100%;
+.line {
+  position: fixed;
+  top: 57%;
+  left: 9.7%;
+  width: 0;
+  height: 0;
+  opacity: 0;
   border: 2px solid #F9C251;
-  border-radius: 10px;
-  z-index: 5;
-  opacity: 1;
-  transition: 1s;
+  border-radius: 20px;
+  transition: 0.5s;
 }
 
-.div2:hover ~ .textbox2 {
-  opacity: 1;
-}
-.textbox2 {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 400px;
-  width: 1540px;
+.textbox {
+  position: fixed;
+  top: 60%;
+  left: 9.7%;
+  width: 80vw;
   height: 250px;
-  border: 2px solid #F9C251;
   border-radius: 10px;
   z-index: 5;
   opacity: 0;
   transition: 1s;
 }
 
-.div3:hover ~ .textbox3 {
+.div1:hover ~ .line {
+  width: 80vw;
   opacity: 1;
-}
-.textbox3 {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 400px;
-  width: 1540px;
-  height: 250px;
-  border: 2px solid #F9C251;
-  border-radius: 10px;
-  z-index: 5;
-  opacity: 0;
-  transition: 1s;
 }
 
-.div4:hover ~ .textbox4 {
+.div2:hover ~ .line {
+  width: 80vw;
   opacity: 1;
 }
-.textbox4 {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 400px;
-  width: 1540px;
-  height: 250px;
-  border: 2px solid #F9C251;
-  border-radius: 10px;
-  z-index: 5;
-  opacity: 0;
-  transition: 1s;
+.div3:hover ~ .line {
+  width: 80vw;
+  opacity: 1;
+}
+.div4:hover ~ .line {
+  width: 80vw;
+  opacity: 1;
+}
+.div5:hover ~ .line {
+  width: 80vw;
+  opacity: 1;
 }
 
-.div5:hover ~ .textbox5 {
+.div1:hover ~ .one {
   opacity: 1;
 }
-.textbox5 {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 400px;
-  width: 1540px;
-  height: 250px;
-  border: 2px solid #F9C251;
-  border-radius: 10px;
-  z-index: 5;
-  opacity: 0;
-  transition: 1s;
+
+.div2:hover ~ .two {
+  opacity: 1;
 }
+
+.div3:hover ~ .three {
+  opacity: 1;
+}
+
+.div4:hover ~ .four {
+  opacity: 1;
+}
+
+.div5:hover ~ .five {
+  opacity: 1;
+}
+
 
 .label {
   position: absolute;
@@ -209,7 +183,6 @@ align-items: center;
   height: 1fr;
   font-size: 24px;
   font-weight: 1000;
-
 }
 .sublabel {
   position: absolute;
@@ -220,16 +193,25 @@ align-items: center;
   height: 1fr;
   font-size: 20px;
   font-style: italic;
-
 }
 
 .maintext {
   position: absolute;
   top: 35%;
   padding-left: 40px;
-  padding-right: 200px;
-  width: auto;
-  height: 2fr;
+  padding-right: 100px;
+  width: 90%;
+  height: auto;
   font-size: 20px;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .textbox {
+    top: 50%;
+  }
+  .line {
+    top: 50%;
+  }
+  
+}
